@@ -14,7 +14,6 @@
   when: ( Build_Name != '' or Build_Number != '' )
   ignore_errors: yes
 
-
 - name: Create Folder
   file: 
     path: "{{ home }}/PRATHEESH"
@@ -26,7 +25,6 @@
 - include: stop.yml
   when: apache2_status.changed == true
   tags: create_folder
-  
 
 - block:
     - name: copying files
